@@ -38,8 +38,16 @@ for (let comunidad of comunidades) {
         
         let popover = document.createElement("popover")
         popover.className = "popover"
-        popover.innerHTML = `<img src="${protectora.logo}">` +"<br> numero: "+protectora.phone + "<br> email: " + protectora.mailto + "<br> web: " + protectora.web
-        popover.setAttribute("popover", "true")
+        popover.innerHTML = `${protectora.name} <br>` 
+        popover.innerHTML += protectora.logo != null ?`<img src="${protectora.logo}"><br>`: ""
+        popover.innerHTML += protectora.phone != null ?`numero: ${protectora.phone} <br>`: ""
+        popover.innerHTML += protectora.mailto != null ?`email: ${protectora.mailto} <br>` : ""
+        popover.innerHTML += protectora.web != null ? `web: <a href="${protectora.web}"> ${protectora.web}</a>` : ""
+                            
+                            
+                           
+                            
+        popover.setAttribute("popover", "")
         popover.id = "protectora"+ protectora.number
         protectorasCaja.appendChild(popover)
         

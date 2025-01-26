@@ -59,7 +59,7 @@ class BuscadorProtectorasUseCase:
     
     def escribirFichero(self, map_protectoras):
         logging.debug("escribirFichero() called")
-        with open(r"resources\protectoras.json", "w", encoding="utf-8") as file:
+        with open(r"page\resources\js\protectoras.json", "w", encoding="utf-8") as file:
             json.dump(map_protectoras, file, ensure_ascii=False, indent=4)
 
         return map_protectoras
