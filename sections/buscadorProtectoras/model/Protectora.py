@@ -10,5 +10,6 @@ class Protectora(BaseModel):
     comunidad_autonoma: str = ""
     paginas: str = ""
     da_datos: int = 0
+    logo: str = ""
 
 
