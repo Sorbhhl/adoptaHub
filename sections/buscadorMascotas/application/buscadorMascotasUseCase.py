@@ -23,11 +23,13 @@ class BuscadorMascotasUseCase:
             for protectora in protectorasComunidadJSON[comunidad]:
                 
                 if not(protectora.get("web") is None or protectora.get("web") == ""):
-                    ruta = protectora.get("number") + protectora.get("web")
+                    ruta = str(protectora.get("number")) + protectora.get("web")
                     logging.debug(ruta)
 
                 elif not(protectora.get("mailto") is None or protectora.get("mailto") == ""):
-                    ruta = protectora.get("number") + protectora.get("mailto")
+                    ruta = str(protectora.get("number")) + protectora.get("mailto")
                     logging.debug(ruta)
+                break
+            break
 
                

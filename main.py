@@ -3,8 +3,8 @@ from sections.buscadorMascotas.application.buscadorMascotasUseCase import Buscad
 from sections.buscadorProtectoras.application.buscarorProtectorasUseCase import BuscadorProtectorasUseCase
 from shared.helpers.loggingHelper import LogginHelper
 
-BUSCARPROTECTORAS = True
-BUSCARMASCOTAS = False
+BUSCARPROTECTORAS = 0
+BUSCARMASCOTAS = 1
 
 
 class main:
@@ -18,8 +18,8 @@ class main:
 
 if __name__ == "__main__":
     main = main()
-    if BUSCARPROTECTORAS:
+    if BUSCARPROTECTORAS == 1:
         main.bp.execute()
-    if BUSCARMASCOTAS:
+    if BUSCARMASCOTAS == 1:
         main.bm.execute()
 
